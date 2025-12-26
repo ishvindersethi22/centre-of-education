@@ -1,6 +1,6 @@
-# Centre of Education
+# bodhan.ai
 
-A minimalist landing page for Centre of Education, built with React and Vite.
+A minimalist landing page for bodhan.ai - Centre of Excellence in AI for Education, built with React and Vite.
 
 ## Development
 

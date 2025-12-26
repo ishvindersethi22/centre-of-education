@@ -18,7 +18,7 @@ function App() {
           <span className="brand-dot">.</span>
           <span className="brand-ai">ai</span>
         </h1>
-        <h2 className="title">Centre of Education</h2>
+        <h2 className="title">Centre of Excellence in AI for Education</h2>
         <p className="tagline">Empowering minds, shaping futures</p>
         <span className="coming-soon">Coming Soon</span>
       </main>
