@@ -92,21 +92,101 @@
   padding: 2rem;
 }
 
-.title {
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  font-weight: 600;
+/* Brand Title - bodhan.ai */
+.brand {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(3.5rem, 12vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+.brand-text {
   color: var(--color-text);
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
-  line-height: 1.1;
+  animation: shimmer 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.brand-dot {
+  color: var(--color-accent);
+  animation: pulse 2s ease-in-out infinite;
+  animation-delay: 1.2s;
+  display: inline-block;
+}
+
+.brand-ai {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-warm) 50%, var(--color-accent-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease-in-out infinite;
+  animation-delay: 1.4s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  50% {
+    filter: hue-rotate(10deg) brightness(1.1);
+  }
+}
+
+/* Subtitle - Centre of Education */
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+  opacity: 0;
 }
 
 .tagline {
-  font-size: clamp(1rem, 3vw, 1.35rem);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 400;
   color: var(--color-text-secondary);
   margin-bottom: 2.5rem;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+  opacity: 0;
 }
 
 .coming-soon {
@@ -120,6 +200,8 @@
   border-radius: 100px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  animation: fadeInUp 1s ease-out 0.7s forwards;
+  opacity: 0;
 }
 
 /* Footer */
@@ -128,6 +210,8 @@
   bottom: 2rem;
   z-index: 1;
   text-align: center;
+  animation: fadeInUp 1s ease-out 0.9s forwards;
+  opacity: 0;
 }
 
 .footer p {
@@ -157,11 +241,27 @@
     width: 220px;
     height: 220px;
   }
+
+  .brand {
+    letter-spacing: -0.02em;
+  }
 }
 
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .gradient-disc {
     animation: none;
+  }
+  
+  .brand,
+  .brand-text,
+  .brand-dot,
+  .brand-ai,
+  .title,
+  .tagline,
+  .coming-soon,
+  .footer {
+    animation: none;
+    opacity: 1;
   }
 }

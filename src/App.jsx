@@ -13,14 +13,19 @@ function App() {
 
       {/* Main content */}
       <main className="content">
-        <h1 className="title">Centre of Education</h1>
+        <h1 className="brand">
+          <span className="brand-text">bodhan</span>
+          <span className="brand-dot">.</span>
+          <span className="brand-ai">ai</span>
+        </h1>
+        <h2 className="title">Centre of Education</h2>
         <p className="tagline">Empowering minds, shaping futures</p>
         <span className="coming-soon">Coming Soon</span>
       </main>
 
       {/* Subtle footer */}
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Centre of Education</p>
+        <p>&copy; {new Date().getFullYear()} bodhan.ai</p>
       </footer>
     </div>
   )
